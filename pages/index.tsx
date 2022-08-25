@@ -123,7 +123,7 @@ const TheButton = ({
 
   return (
     <button
-      className="btn btn-primary btn-lg shadow-xl"
+      className="btn btn-primary btn-lg shadow-xl umami--click--button-press"
       onClick={async () => {
         addYak(yaks, setYaks, "button");
         await fetch("/api/button", {
