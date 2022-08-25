@@ -136,7 +136,7 @@ const TheButton = ({
         await mutate("/api/button");
       }}
     >
-      Don{"'"}t push the button
+      👉 Don{"'"}t push the button 👈
     </button>
   );
 };
