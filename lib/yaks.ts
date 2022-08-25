@@ -30,6 +30,7 @@ export const basicYaks = [
   "upvote if you have a pulse, tryna prove a point",
   "what time does the welly open?",
   "I'm bored",
+  "women need a time in the welly when there are no men 💅",
 ];
 
 export const buttonYaks = [

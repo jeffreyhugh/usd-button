@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 import { v4 as uuidv4 } from "uuid";
 import Head from "next/head";
+import Script from "next/script";
 
 type Yak = {
   button: boolean;
@@ -39,7 +40,7 @@ export default function Page() {
   if (error) {
     console.error(error);
     return (
-      <html data-theme="autumn">
+      <div data-theme="autumn">
         <main className="w-full">
           <div className="hero min-h-screen bg-primary">
             <h1 className="text-xl text-error-content">
@@ -47,7 +48,7 @@ export default function Page() {
             </h1>
           </div>
         </main>
-      </html>
+      </div>
     );
   }
 
@@ -56,9 +57,10 @@ export default function Page() {
   }
 
   return (
-    <html data-theme="autumn">
+    <div data-theme="autumn">
       <Head>
-        <title>Don{"'"}t push the button</title>
+        <title>Don{"'"}t push the button | usd-button.com</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <meta property="og:title" content="Don't push the button" />
         <meta property="og:url" content="https://usd-button.com" />
         <meta property="og:type" content="website" />
@@ -67,6 +69,12 @@ export default function Page() {
           content="https://blog.akademos.com/hubfs/University+of+South+Dakota.jpg"
         />
       </Head>
+      <Script
+        async
+        defer
+        data-website-id="aac21d7d-0d80-4679-9efb-4b70ea621564"
+        src="https://umami.queue.bot/umami.js"
+      />
       <main className="relative w-full">
         <Stats count={data.count} />
         <div
@@ -82,7 +90,7 @@ export default function Page() {
         </div>
         <YakFeed yaks={yaks} />
       </main>
-    </html>
+    </div>
   );
 }
 
